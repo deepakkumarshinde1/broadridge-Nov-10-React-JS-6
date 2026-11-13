@@ -1,5 +1,8 @@
+import { useUserContext } from "../context/users.context";
+
 function UsersListItem(props) {
-  let { value, removeUser } = props;
+  let { value } = props;
+  let { removeUser } = useUserContext();
 
   return (
     <li key={value.id} className="my-3">

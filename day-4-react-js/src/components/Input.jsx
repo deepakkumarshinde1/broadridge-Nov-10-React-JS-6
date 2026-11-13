@@ -1,5 +1,7 @@
-function Input(props) {
-  let { user, inputChange, pressHandler } = props;
+import { useUserContext } from "../context/users.context";
+
+function Input() {
+  let { user, inputChange, pressHandler } = useUserContext();
   return (
     <>
       <input
