@@ -1,0 +1,24 @@
+.menu {
+  display: flex;
+  list-style: none;
+  /* border-bottom: 1px solid gray; */
+  box-shadow: 0 2px 15px gray;
+  padding: 1rem;
+  /* position: fixed;
+  top: 0px;
+  width: 100%;
+  background-color: white;
+  height: 10vh; */
+}
+
+.menu li {
+  margin: 0.5rem 1rem;
+}
+
+.menu li a {
+  text-decoration: none;
+}
+
+.menu li .active {
+  text-decoration: underline;
+}
