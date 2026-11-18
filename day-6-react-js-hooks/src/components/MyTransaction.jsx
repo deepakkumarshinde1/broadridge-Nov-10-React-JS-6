@@ -19,6 +19,8 @@ function MyTransaction() {
   let [transactionSearch, setTransactionSearch] = useState([...transactions]);
   let deferredSearch = useDeferredValue(inputBox);
 
+  let isFullyUpdated = inputBox !== deferredSearch;
+
   let handelChange = (event) => {
     let { value } = event.target;
     setInputBox(value);
@@ -40,7 +42,11 @@ function MyTransaction() {
         placeholder="Search"
         onChange={handelChange}
       />
-      <table className="table">
+      <p>{isFullyUpdated && "Updating"}</p>
+      <table
+        className="table"
+        style={{ color: isFullyUpdated ? "red" : "black" }}
+      >
         <thead>
           <tr>
             <th>Sr. No</th>
